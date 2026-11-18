@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="description" content="Explora seis plataformas para publicar tu aplicación. Compara capacidades, costos y alternativas con información de fuentes oficiales.">
+  <title>Deployment Explorer — Encuentra el lugar para tu app</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#explorar" aria-label="Deployment Explorer, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 35 12v16L20 37 5 28V12Z"/><path d="m5 12 15 9 15-9M20 21v16M12 16l8-5 8 5M12 25l8 5 8-5"/></svg>
+      <span>deployment<span class="brand-sub">EXPLORER</span></span>
+    </a>
+    <nav aria-label="Navegación principal" id="navigation">
+      <a href="#explorar" data-page="explorar" class="active">Explorar</a>
+      <a href="#comparar" data-page="comparar">Comparar</a>
+      <a href="#asistente" data-page="asistente">Encontrar mi plataforma</a>
+      <a href="#fuentes" data-page="fuentes">Fuentes y límites</a>
+    </nav>
+    <button class="header-compare" data-action="compare"><span data-icon="layers"></span><span>Mi comparación</span><b id="header-count">0</b></button>
+  </header>
+  <div class="workspace">
+    <main id="main" tabindex="-1">
+      <div class="eyebrow page-eyebrow"><span class="tiny-square"></span> UNA DECISIÓN INFORMADA EMPIEZA AQUÍ <span class="edition">EDICIÓN 2026</span></div>
+      <div id="page-content"><div class="loading"><span class="spinner"></span>Cargando las plataformas…</div></div>
+    </main>
+    <aside class="sidebar" aria-label="Filtros y resumen">
+      <div class="aside-heading"><h2><span data-icon="sliders"></span>Define tu proyecto</h2><button class="text-button" data-action="clear">Limpiar</button></div>
+      <p class="muted aside-intro">Encuentra lo que se adapta a tu idea.</p>
+      <div id="filter-controls"></div>
+      <div class="sidebar-divider"></div>
+      <section class="integration-panel" aria-labelledby="integration-title">
+        <div class="aside-heading"><h2 id="integration-title"><span data-icon="chart"></span>¿Qué viene integrado?</h2><span class="info-tip" tabindex="0" role="note" aria-label="Cuenta cuatro capacidades: datos, usuarios, archivos y procesos." title="Cuenta cuatro capacidades: datos, usuarios, archivos y procesos.">i</span></div>
+        <p class="muted aside-intro">Cuatro piezas para operar tu aplicación.</p>
+        <div id="mini-chart"></div>
+        <div class="chart-legend"><span><i class="included"></i>Incluido</span><span><i class="configurable"></i>Configurable</span><span><i class="external"></i>Externo</span><span><i class="limited"></i>Con límites / no incluido</span></div>
+        <p class="footnote">Integración no es una calificación de calidad.</p>
+      </section>
+      <div class="sidebar-note"><span data-icon="shield"></span><div><b>Un dominio no hace privado tu sitio.</b><p>La dirección y quién puede entrar son decisiones distintas.</p></div></div>
+      <div class="verified"><span class="status-dot"></span>Datos verificados<span>18 NOV 2026</span></div>
+    </aside>
+  </div>
+  <footer class="site-footer"><span>deployment explorer<span class="footer-dot"> / </span> Una guía para elegir, con criterio.</span><span>6 plataformas. Diferentes caminos.</span></footer>
+  <div id="comparison-tray" class="comparison-tray" hidden></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <noscript><p>Activa JavaScript para usar los filtros y comparar las plataformas.</p></noscript>
+</body>
+</html>
